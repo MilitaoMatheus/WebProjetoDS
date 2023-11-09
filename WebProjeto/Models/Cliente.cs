@@ -21,8 +21,8 @@ namespace WebProjeto.Models
         [Display(Name = "CPF")]
         [Required(ErrorMessage = "Por favor, preencha o campo CPF")]
         [StringLength(11)]
-        [DisplayFormat(DataFormatString = "{xxx.xxx.xxx-xx}")]
-        public int CPF { get; set; }
+        //[DisplayFormat(DataFormatString = "{xxx.xxx.xxx-xx}")]
+        public string CPF { get; set; }
 
         [Display(Name = "Email")]
         [Required(ErrorMessage = "Por favor, preencha o campo Email")]
@@ -36,7 +36,7 @@ namespace WebProjeto.Models
         [Display(Name = "Telefone")]
         [Required(ErrorMessage = "Por favor, preencha o campo Telefone, incluindo o DDD")]
         [StringLength(11)]
-        [DisplayFormat(DataFormatString = "{(xx)xx xxxxx-xxxx}")]
+        //[DisplayFormat(DataFormatString = "{(xx)xx xxxxx-xxxx}")]
         public string telDDD { get; set; }
 
         [Display(Name = "Data de Nascimento")]

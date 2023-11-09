@@ -1,0 +1,69 @@
+﻿@model IEnumerable<WebProjeto.Models.Cliente>
+
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Resultado</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.codCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.endereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telDDD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataNasc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CPF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.endereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telDDD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dataNasc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
